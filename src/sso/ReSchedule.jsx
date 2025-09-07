@@ -87,7 +87,7 @@ useEffect(() => {
       newarrTime: arrivalTime
     }
     console.log(flightdata);
-    const response = await fetch('http://localhost:3000/api/re-edit-flightin', {
+    const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/re-edit-flightin', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

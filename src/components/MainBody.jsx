@@ -14,7 +14,7 @@ const MainBody = ({setUser}) => {
 
   const status = async () => {
     // console.log('Status Update');
-      const response = await fetch('http://localhost:3000/api/update-profile-on', {
+      const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/update-profile-on', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

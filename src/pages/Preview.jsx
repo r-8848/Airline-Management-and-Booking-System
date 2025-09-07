@@ -20,7 +20,7 @@ const Preview = ({user}) => {
         
         try {
             // First check if seats are still available
-            const availabilityCheck = await fetch("http://localhost:3000/api/check-availability", {
+            const availabilityCheck = await fetch("https://airline-management-and-booking-syst.vercel.app/api/check-availability", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const Preview = ({user}) => {
             }
             
             // Proceed with payment if seats are available
-            let response = await axios.post("http://localhost:3000/api/payments", data);
+            let response = await axios.post("https://airline-management-and-booking-syst.vercel.app/api/payments", data);
             if (response && response.status === 200) {
                 // console.log(response.data);
                 if (response.data.url) {

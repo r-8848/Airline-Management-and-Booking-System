@@ -14,6 +14,7 @@ const port = 3000;
 // Enable CORS
 app.use(cors());
 
+
 // MongoDB connection URI
 const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);

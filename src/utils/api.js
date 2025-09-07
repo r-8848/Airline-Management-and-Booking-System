@@ -1,6 +1,6 @@
 // API utility functions for handling JWT authentication
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://airline-management-and-booking-syst.vercel.app/';
 
 // Get token from localStorage
 export const getToken = () => {

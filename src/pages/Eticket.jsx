@@ -43,7 +43,7 @@ const Eticket = ({user}) => {
     sessionStorage.setItem('bookingSent', true);
     const Booking = async () => {
       // Use the new improved booking endpoint with validation
-      let response = await fetch("http://localhost:3000/api/booking-with-validation", {
+      let response = await fetch("https://airline-management-and-booking-syst.vercel.app/api/booking-with-validation", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -89,7 +89,7 @@ const Register = () => {
 
     // console.log(formData);
     // Send data to the backend
-    let response = await fetch('http://localhost:3000/api/users', {
+    let response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

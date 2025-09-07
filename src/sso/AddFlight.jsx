@@ -33,7 +33,7 @@ function AddFlight() {
   console.log(data);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const Filter = data.filter(airport => airport.code !== destinationAirport);
@@ -43,7 +43,7 @@ function AddFlight() {
   }, [destinationAirport]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const filtered = data.filter(airport => airport.code !== originAirport);
@@ -75,7 +75,7 @@ function AddFlight() {
 
   // useEffect(() => {
   //   const fetchFlightNames = async () => {
-  //           const response = await fetch('http://localhost:3000/api/flights');
+  //           const response = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flights');
   //           if (!response.ok) {
   //               throw new Error('Network response was not ok ' + response.statusText);
   //           }
@@ -120,7 +120,7 @@ function AddFlight() {
   //   useEffect(() => {
   //     if (flightName) {
   //         const fetchFlightNumbers = async () => {
-  //             const response = await fetch('http://localhost:3000/api/flights');
+  //             const response = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flights');
   //             if (!response.ok) {
   //                 throw new Error('Network response was not ok ' + response.statusText);
   //             }
@@ -137,7 +137,7 @@ function AddFlight() {
   // }, [flightName]);
 // useEffect(() => {
 //     const checkFlightSchedule = async () => {
-//           const response = await fetch('http://localhost:3000/api/flightinfo');
+//           const response = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flightinfo');
 //           if (!response.ok) {
 //               throw new Error('Network response was not ok ' + response.statusText);
 //           }
@@ -183,7 +183,7 @@ const handleSubmit = async (e) => {
     }
 
     console.log(flightdata);
-      const response = await fetch('http://localhost:3000/api/airlines-addflt', {
+      const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/airlines-addflt', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ const handleSubmit = async (e) => {
           throw new Error('Network response was not ok ' + response.statusText);
       }
 
-      const res = await fetch("http://localhost:3000/api/flights", {
+      const res = await fetch("https://airline-management-and-booking-syst.vercel.app/api/flights", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

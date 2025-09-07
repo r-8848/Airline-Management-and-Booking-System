@@ -10,7 +10,7 @@ function UserInfo() {
     
     useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch('http://localhost:3000/api/users');
+            const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/users');
             if (!response.ok) {
               throw new Error('Failed to fetch users');
             }

@@ -11,7 +11,7 @@ const FlightsManagement = () => {
   // useEffect(() => {
   //   const fetchFlights = async () => {
   //     try {
-  //       const response = await fetch('http://localhost:3000/api/flightinfo');
+  //       const response = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flightinfo');
   //       if (!response.ok) {
   //         throw new Error(`HTTP error! status: ${response.status}`);
   //       }
@@ -19,7 +19,7 @@ const FlightsManagement = () => {
 
   //       const flightsWithDetails = [];
   //       for (const flight_ of flightsData) {
-  //         const detailsResponse = await fetch('http://localhost:3000/api/flights');
+  //         const detailsResponse = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flights');
   //         if (detailsResponse.ok) {
   //           const detailsData = await detailsResponse.json();
   //           const flightDetails = detailsData.filter(flight =>
@@ -48,7 +48,7 @@ const FlightsManagement = () => {
   useEffect(() => {
     const fetchFlights = async () => {
       try {
-          const response = await fetch('http://localhost:3000/api/flights');
+          const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/flights');
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -56,7 +56,7 @@ const FlightsManagement = () => {
   
           // const flightsWithDetails = [];
           // for (const flight_ of flightsData) {
-          //   const detailsResponse = await fetch('http://localhost:3000/api/flights');
+          //   const detailsResponse = await fetch('https://airline-management-and-booking-syst.vercel.app//api/flights');
           //   if (detailsResponse.ok) {
           //     const detailsData = await detailsResponse.json();
           //     const flightDetails = detailsData.filter(flight =>

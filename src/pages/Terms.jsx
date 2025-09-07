@@ -1,4 +1,4 @@
-import React from 'react';
+git commit -m "Fix logout button on user profile page"import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Terms = () => {

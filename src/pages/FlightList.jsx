@@ -43,7 +43,7 @@ const FlightList = ({user, setUser}) => {
 
   useEffect(() => {
     const fetchFlights = async () => {
-        const response = await fetch('http://localhost:3000/api/flights');
+        const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/flights');
         if (!response.ok) {
           throw new Error('Failed to fetch flights');
         }
@@ -55,7 +55,7 @@ const FlightList = ({user, setUser}) => {
 
         for (let i = 0; i < filteredFlights.length; i++) {
           const flight_ = filteredFlights[i];
-          const initData = await fetch('http://localhost:3000/api/airlines');
+          const initData = await fetch('https://airline-management-and-booking-syst.vercel.app/api/airlines');
           if (initData.ok) {
             const info = await initData.json();
             const imageInfo = info.find(flt => flt.flightName === flight_.flightName);
@@ -67,7 +67,7 @@ const FlightList = ({user, setUser}) => {
         
         const flightsWithDetails = [];
         for (const flight_ of filteredFlights) {
-          const detailsResponse = await fetch('http://localhost:3000/api/flightinfo');
+          const detailsResponse = await fetch('https://airline-management-and-booking-syst.vercel.app/api/flightinfo');
           if (detailsResponse.ok) {
             const detailsData = await detailsResponse.json();
             const flightDetails = detailsData.filter(flight =>

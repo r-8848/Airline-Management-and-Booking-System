@@ -13,7 +13,7 @@ function Update() {
   useEffect(() => {
     const fetchFlights = async () => {
 			  setLoading(true);
-        const response = await fetch(`http://localhost:3000/api/flightinfo?page=${page}`);
+        const response = await fetch(`https://airline-management-and-booking-syst.vercel.app/api/flightinfo?page=${page}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -24,7 +24,7 @@ function Update() {
 
         const flightsWithDetails = [];
         for (const flight_ of flightsData) {
-          const detailsResponse = await fetch('http://localhost:3000/api/flights');
+          const detailsResponse = await fetch('https://airline-management-and-booking-syst.vercel.app/api/flights');
           if (detailsResponse.ok) {
             const detailsData = await detailsResponse.json();
             const flightDetails = detailsData.filter(flight =>

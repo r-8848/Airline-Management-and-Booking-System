@@ -14,7 +14,7 @@ const MyFlights = ({user}) => {
     const fetchFlights = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/bookings');
+        const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/bookings');
         if (!response.ok) {
           throw new Error('Failed to fetch bookings');
         }
@@ -31,7 +31,7 @@ const MyFlights = ({user}) => {
         );
         
         // Fetch airline logos
-        const airlinesResponse = await fetch('http://localhost:3000/api/airlines');
+        const airlinesResponse = await fetch('https://airline-management-and-booking-syst.vercel.app/api/airlines');
         if (airlinesResponse.ok) {
           const airlinesData = await airlinesResponse.json();
           

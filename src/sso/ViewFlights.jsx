@@ -14,7 +14,7 @@ const ViewFlights = () => {
     useEffect(() => {
         const fetchFlights = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/airlines');
+                const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/airlines');
                 const flights = await response.json();
                 const filteredFlights = flights.filter((flight)=>flight.flightCode === data.flightCode);
                 setFlights(filteredFlights[0].flights);
@@ -25,7 +25,7 @@ const ViewFlights = () => {
                   const flightDetails = [];
                   
                   for (const flightNo of filteredFlights[0].flights) {
-                      const flightDetailsResponse = await fetch(`http://localhost:3000/api/flights`);
+                      const flightDetailsResponse = await fetch(`https://airline-management-and-booking-syst.vercel.app/api/flights`);
                       const flightDetailsData = await flightDetailsResponse.json();
                       const filteredFlightsWithDetails = flightDetailsData.filter((flight)=>flight.flightNumber === flightNo);
                       flightDetails.push(filteredFlightsWithDetails[0]);

@@ -55,7 +55,7 @@ const Body = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const Filter = data.filter(airport => airport.code !== destinationAirport.value);
@@ -65,7 +65,7 @@ const Body = () => {
   }, [destinationAirport]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const Filter = data.filter(airport => airport.code !== destinationAirport_.value);
@@ -75,7 +75,7 @@ const Body = () => {
   }, [destinationAirport_]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const filtered = data.filter(airport => airport.code !== originAirport.value);
@@ -85,7 +85,7 @@ const Body = () => {
   }, [originAirport]);
   
   useEffect(() => {
-    fetch('http://localhost:3000/api/airports')
+    fetch('https://airline-management-and-booking-syst.vercel.app/api/airports')
       .then(response => response.json())
       .then(data => {
         const filtered = data.filter(airport => airport.code !== originAirport_.value);

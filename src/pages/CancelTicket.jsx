@@ -12,7 +12,7 @@ const CancelTicket = ({user}) => {
 
   useEffect(() => {
     const fetchFlights = async () => {
-        const response = await fetch('http://localhost:3000/api/bookings');
+        const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/bookings');
         if (!response.ok) {
           throw new Error('Failed to fetch bookings');
         }
@@ -107,14 +107,14 @@ const CancelTicket = ({user}) => {
             time: booking.time,
             formData: updatedFormData
         }
-        let response = await fetch("http://localhost:3000/api/cancelall", {
+        let response = await fetch("https://airline-management-and-booking-syst.vercel.app/api/cancelall", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(cancelData),
         });
-        let response_ = await fetch("http://localhost:3000/api/booking", {
+        let response_ = await fetch("https://airline-management-and-booking-syst.vercel.app/api/booking", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ const CancelTicket = ({user}) => {
         passengers: 1,
         seat: booking.data.seat.toLowerCase(),
       };
-      let response = await fetch("http://localhost:3000/api/cancelall", {
+      let response = await fetch("https://airline-management-and-booking-syst.vercel.app/api/cancelall", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ const CancelTicket = ({user}) => {
         time: booking.time,
         passengerIndex: index,
       };
-      const response_ = await fetch("http://localhost:3000/api/cancelOne", {
+      const response_ = await fetch("https://airline-management-and-booking-syst.vercel.app/api/cancelOne", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -38,7 +38,6 @@ import ProtectedRoute from './sso/ProtectedRoute'
 import AccessDenied from './sso/AccessDenied'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
-
 function App() {
 
   const [user, setUser] = useState(null);
@@ -80,7 +79,7 @@ function App() {
   const updateUserStatus = async (status) => {
     if (!user) return;
     try {
-              await fetch('http://localhost:3000/api/update-profile-on', {
+              await fetch('https://airline-management-and-booking-syst.vercel.app//api/update-profile-on', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

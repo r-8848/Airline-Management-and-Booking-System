@@ -188,7 +188,7 @@ useEffect(() => {
       prices
     }
     console.log(flightdata);
-    const response = await fetch('http://localhost:3000/api/edit-flightin', {
+    const response = await fetch('https://airline-management-and-booking-syst.vercel.app/api/edit-flightin', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
