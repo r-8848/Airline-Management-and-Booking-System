@@ -1,6 +1,7 @@
 // API utility functions for handling JWT authentication
 
-const API_BASE_URL = 'https://airline-management-and-booking-syst.vercel.app/';
+// Get API base URL from environment variable or use default
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 // Get token from localStorage
 export const getToken = () => {

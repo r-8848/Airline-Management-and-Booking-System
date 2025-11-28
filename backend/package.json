@@ -1,15 +1,16 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
+  "name": "flyhigh-backend",
+  "version": "2.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["airline", "booking", "express", "rest-api"],
+  "author": "Flyhigh Airlines",
   "license": "ISC",
-  "description": "",
+  "description": "Industry-standard RESTful API for Flyhigh Airlines booking system with proper separation of concerns",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.2",
@@ -21,5 +22,8 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.10.1",
     "stripe": "^15.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
